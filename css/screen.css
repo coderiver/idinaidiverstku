@@ -22,11 +22,11 @@ body { font-family: Arial, sans-serif; font-weight: normal; font-size: 12px; lin
 .advert-nav a { color: #636363; text-decoration: none; line-height: 36px; white-space: nowrap; padding: 4px 20px 0; }
 .advert-nav a:hover { text-decoration: underline; }
 .advert-nav .arr { display: inline-block; vertical-align: middle; height: 10px; width: 7px; position: relative; top: -2px; }
-.advert-nav .advert-nav-to-list .arr, .advert-nav .advert-nav-prev .arr { background: url('../img/icons-s45e9e3e2be.png') 0 0 no-repeat; margin-right: 10px; }
+.advert-nav .advert-nav-to-list .arr, .advert-nav .advert-nav-prev .arr { background: url('../img/icons-seeb869fddb.png') 0 0 no-repeat; margin-right: 10px; }
 .advert-nav .advert-nav-to-list { float: left; }
 .advert-nav .advert-nav-prev { float: right; }
 .advert-nav .advert-nav-next { float: right; }
-.advert-nav .advert-nav-next .arr { background: url('../img/icons-s45e9e3e2be.png') 0 -20px no-repeat; margin-left: 10px; }
+.advert-nav .advert-nav-next .arr { background: url('../img/icons-seeb869fddb.png') 0 -20px no-repeat; margin-left: 10px; }
 
 .breadcrumbs { font-family: "ProximaNova", Arial, Helvetica, sans-serif; font-size: 11px; letter-spacing: 0.06em; overflow: hidden; list-style: none; margin-bottom: 5px; }
 .breadcrumbs li { float: left; }
@@ -36,10 +36,52 @@ body { font-family: Arial, sans-serif; font-weight: normal; font-size: 12px; lin
 
 .advert { font-family: "ProximaNova", Arial, Helvetica, sans-serif; }
 
-.advert-title { font-size: 26px; color: black; font-weight: normal; line-height: 1.2; letter-spacing: 0.01em; }
+.advert-title { font-size: 26px; color: black; font-weight: normal; line-height: 1.2; letter-spacing: 0.015em; margin-bottom: 15px; }
+
+.advert-info { margin-bottom: 40px; }
+.advert-info:after { display: table; clear: both; content: ""; }
 
 .advert-data { float: left; }
-.advert-data table { color: #656a73; font-size: 13px; text-align: center; }
+.advert-data table { color: #656a73; font-size: 13px; text-align: center; border-spacing: 0; border: 1px solid #e5e5e5; background: #f4f4f4; width: 242px; }
+.advert-data td { border: 1px solid #e5e5e5; width: 50%; height: 90px; line-height: 1.2; }
+.advert-data strong { display: block; font-family: "ProximaNova_EX_Bold", Arial, Helvetica, sans-serif; font-weight: normal; font-size: 34px; }
+.advert-data span { color: #b4b4b4; display: block; font-size: 12px; }
+.advert-data span i { text-decoration: line-through; font-style: normal; text-transform: uppercase; }
+.advert-data .cell-mid { height: 63px; }
+.advert-data .cell-small { height: 50px; }
 
-.advert-photo { float: right; }
+.hypothec { background: white; box-shadow: 0 0 0 2px white, 0 0 10px 2px rgba(0, 0, 0, 0.5); position: relative; }
+.hypothec:before { content: ""; position: absolute; top: -8px; margin-left: -7px; left: 50%; height: 6px; width: 14px; background: url('../img/icons-seeb869fddb.png') 0 -40px no-repeat; }
+.hypothec .hypothec-inner { display: table-cell; height: 102px; width: 100%; vertical-align: middle; }
+.hypothec .hypothec-link { color: #eb501b; font-size: 12px; }
+
+.advert-photo { float: right; width: 389px; height: 337px; padding: 2px; border: 1px solid #c4c4c4; border-radius: 2px; text-align: center; }
 .advert-photo img { vertical-align: top; }
+
+.advert-map { border: 1px solid #cccccc; border-radius: 3px; overflow: hidden; margin: 22px 0 26px; }
+.advert-map img { vertical-align: top; border-radius: 3px; }
+
+.advert-text { font-size: 15px; line-height: 1.34; }
+.advert-text p { margin: 20px 0; }
+.advert-text p:last-child { margin-bottom: 15px; }
+
+.advert-features { font-size: 14px; width: 100%; border-spacing: 0 5px; }
+.advert-features tr:nth-child(even) td { background: #efefef; }
+.advert-features tr:nth-child(even) th { background: #efefef; }
+.advert-features th { font-family: "ProximaNova_Bold", Arial, Helvetica, sans-serif; text-align: left; font-weight: normal; height: 35px; padding: 0 15px; width: 225px; }
+.advert-features td { height: 35px; }
+
+.advert-form { background: #c1213a; border-radius: 2px; margin: 15px 0; }
+
+.btn-holder { margin-bottom: 40px; overflow: hidden; }
+.btn-holder .btn-liked { margin-right: 10px; }
+
+.btn-liked, .btn-error { border-radius: 3px; height: 32px; width: 143px; text-align: center; font-size: 14px; line-height: 32px; text-decoration: none; float: left; }
+
+.btn-liked { background: #c1213a; color: white; border: 1px solid #c1213a; }
+
+.btn-error { background: white; color: black; border: 1px solid #c3c3c3; }
+
+.banner { margin: 30px 0; }
+.banner a { height: 100%; display: block; }
+.banner img { vertical-align: top; }
