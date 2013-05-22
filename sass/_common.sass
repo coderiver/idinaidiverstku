@@ -1,5 +1,25 @@
 
 $icons: sprite-map("icons/*.png", $spacing: 10px)
+@mixin inline-block
+	display: inline-block
+
+@mixin border-radius($rad)
+	border-radius: $rad
+
+@mixin transition($what: all, $length: 1s, $easing: ease-in-out)
+	-moz-transition:    $what $length $easing
+	-o-transition:      $what $length $easing
+	-webkit-transition: $what $length $easing
+	-ms-transition:     $what $length $easing
+	transition:         $what $length $easing
+@mixin input-placeholder($color)
+	&.placeholder
+		color: $color
+	&:-moz-placeholder
+		color: $color
+	&::-webkit-input-placeholder
+		color: $color
+
 
 *
 	margin: 0
@@ -12,23 +32,27 @@ input[type="submit"]::-moz-focus-inner
 	border: 0
 
 @font-face
-	font-family: 'ProximaNova_EX_Bold'
+	font-family: 'Proxima Nova Narrow'
 	src: url('fonts/proximanovaexcn-bold-webfont.eot')
 	src: url('fonts/proximanovaexcn-bold-webfont.eot?#iefix') format('embedded-opentype'), url('fonts/proximanovaexcn-bold-webfont.woff') format('woff'), url('fonts/proximanovaexcn-bold-webfont.ttf') format('truetype'), url('fonts/proximanovaexcn-bold-webfont.svg#proxima_nova_excn_rgbold') format('svg')
 	font-weight: normal
 	font-style: normal
 @font-face
-	font-family: 'ProximaNova'
+	font-family: 'Proxima Nova'
 	src: url('fonts/proximanova-regular-webfont.eot')
 	src: url('fonts/proximanova-regular-webfont.eot?#iefix') format('embedded-opentype'), url('fonts/proximanova-regular-webfont.woff') format('woff'), url('fonts/proximanova-regular-webfont.ttf') format('truetype'), url('fonts/proximanova-regular-webfont.svg#proxima_nova_rgregular') format('svg')
 	font-weight: normal
 	font-style: normal
 @font-face
-	font-family: 'ProximaNova_Bold'
+	font-family: 'Proxima Nova Bold'
 	src: url('fonts/proximanova-bold-webfont.eot')
 	src: url('fonts/proximanova-bold-webfont.eot?#iefix') format('embedded-opentype'), url('fonts/proximanova-bold-webfont.woff') format('woff'), url('fonts/proximanova-bold-webfont.ttf') format('truetype'), url('fonts/proximanova-bold-webfont.svg#proxima_nova_rgbold') format('svg')
-	font-weight: normal
+	font-weight: bold
 	font-style: normal
+
+$default-font: "Proxima Nova", Arial, sans-serif
+$bold-font: "Proxima Nova Bold", Arial, sans-serif
+$narrow-font: "Proxima Nova Narrow", "PT Sans Narrow", Arial, sans-serif
 
 body
 	font:
@@ -58,7 +82,7 @@ a img,fieldset
 	width: 300px
 
 .advert-nav
-	font-family: "ProximaNova",Arial,Helvetica,sans-serif
+	font-family: $default-font
 	height: 40px
 	background: #f5f5f5
 	color: #636363
@@ -95,7 +119,7 @@ a img,fieldset
 			margin-left: 10px
 
 .breadcrumbs
-	font-family: "ProximaNova",Arial,Helvetica,sans-serif
+	font-family: $default-font
 	font-size: 11px
 	letter-spacing: 0.06em
 	overflow: hidden
@@ -111,9 +135,11 @@ a img,fieldset
 			display: none
 	a
 		color: #8a8a8a
+		&:hover
+			text-decoration: none
 
 .advert
-	font-family: "ProximaNova",Arial,Helvetica,sans-serif
+	font-family: $default-font
 
 .advert-title
 	font-size: 26px
@@ -141,7 +167,6 @@ a img,fieldset
 		border: 1px solid #e5e5e5
 		background: #f4f4f4
 		width: 242px
-	tr
 	td
 		border: 1px solid #e5e5e5
 		width: 50%
@@ -149,7 +174,7 @@ a img,fieldset
 		line-height: 1.2
 	strong
 		display: block
-		font-family: "ProximaNova_EX_Bold",Arial,Helvetica,sans-serif
+		font-family: $narrow-font
 		font-weight: normal
 		font-size: 34px
 	span
@@ -184,7 +209,9 @@ a img,fieldset
 		vertical-align: middle
 	.hypothec-link
 		color: #eb501b
-		font-size: 12px
+//		font-size: 12px
+//			&:hover
+//				text-decoration: none
 .advert-photo
 	float: right
 	width: 389px
@@ -224,34 +251,13 @@ a img,fieldset
 		th
 			background: #efefef
 	th
-		font-family: "ProximaNova_Bold",Arial,Helvetica,sans-serif
+		font-family: $bold-font
 		text-align: left
-		font-weight: normal
 		height: 35px
 		padding: 0 15px
 		width: 225px
 	td
 		height: 35px
-
-.advert-form
-	background: #c1213a
-	border-radius: 2px
-	margin: 15px 0
-	form
-	.advert-form-block
-	.advert-form-box
-
-.advert-company
-	.advert-company-logo
-		img
-	.advert-company-name
-
-.advert-input
-
-.advert-textarea
-
-.advert-btn
-
 .btn-holder
 	margin-bottom: 40px
 	overflow: hidden
@@ -282,3 +288,196 @@ a img,fieldset
 		display: block
 	img
 		vertical-align: top
+
+
+//form
+.advert-form
+	background: #c1213a
+	border-radius: 4px
+	margin: 15px 0
+	padding: 10px 20px 20px
+	font-size: 0
+	line-height: 0
+	form
+	input[type=text], input[type=email], input[type=phone]
+		height: 38px
+		width: 244px
+	textarea
+		height: 79px
+		font-family: $default-font
+		font-size: 14px
+		resize:none
+		width: 230px
+	.input
+		margin-bottom: 10px
+	.advert-form-title
+		font-size: 20px
+		font-weight: normal
+		color: #fff
+		width: 230px
+		margin: 0 0 11px 0
+		line-height: 1.2
+	.advert-form-block
+		display: inline-block
+		width: 100%
+	.advert-form-box
+		float: left
+		&:first-child
+			margin-right: 10px
+	.burgundy-button
+		height: 40px
+		width: 244px
+		line-height: 40px
+		text-align: center
+		font-size: 14px
+		margin-bottom: 10px
+	.orange-button
+		width: 260px
+		height: 40px
+		font-size: 15px
+
+.advert-form-big
+	padding: 10px 10px 0
+	.advert-form-title
+		letter-spacing: 0.015em
+		margin: 2px 0 11px 7px
+		width: auto
+	.advert-form-box:first-child
+		margin-right: 10px
+	input[type=text], input[type=email], input[type=phone]
+		width: 300px
+	textarea
+		width: 279px
+	.orange-button
+		width: 307px
+	.burgundy-button
+		width: 291px
+	.advert-company
+		width: 314px
+		margin-right: 10px
+
+.advert-company
+	width: 260px
+	float: left
+	line-height: 40px
+	margin-bottom: 10px
+	.advert-company-logo
+		display: inline-block
+		vertical-align: middle
+		img
+			vertical-align: middle
+	.advert-company-name
+		font-size: 16px
+		color: #fff
+		font-family: $bold-font
+		display: inline-block
+		margin-left: 20px
+		vertical-align: middle
+
+
+$red: #dd0017
+$orange: #ec4723
+$burgundy: #731516
+
+// old form styles
+input[type=text], input[type=email], input[type=phone]
+	border: 1px solid #cecece
+	background-color: #fff
+	height: 31px
+	font-size: 14px
+	padding-left: 14px
+	vertical-align: top
+	+border-radius(4px)
+	color: #333
+	+input-placeholder(#aaaaaa)
+//		color: #aaaaaa
+
+	&.is-flat-right
+		+border-radius(4px 0 0 4px)
+		margin-right: 0
+	&.is-joined-right
+		+border-radius(4px 0 0 4px)
+		margin-right: 0
+		border-right: none
+
+.field_with_hint
+	input
+		+border-radius(4px 0 0 4px)
+		margin-right: 0
+		border-right: none
+	.hint
+		+inline-block
+		border: 1px solid #cecece
+		+border-radius(0 4px 4px 0)
+		border-left: none
+		font-size: 16px
+		color: #595c6b
+		height: 39px
+		padding-left: 5px
+		width: 30px
+		line-height: 39px
+
+input[type=submit]
+	cursor: pointer
+	height: 31px
+	+border-radius(4px)
+	padding-left: 18px
+	padding-right: 18px
+	font-size: 13px
+	vertical-align: top
+	border: 1px solid #cecece
+	background-color: #fff
+
+	&.is-joined-left
+		+border-radius(0 4px 4px 0)
+		border-left: none
+		margin-left: -1px
+	&.is-red
+		color: #fff
+		border: none
+		background-color: $red
+
+textarea
+	border: 1px solid #cecece
+	background-color: #fff
+	font-size: 13px
+	padding: 5px 14px
+	vertical-align: top
+	+border-radius(4px)
+	color: #333
+//	+input-placeholder(#cccccc)
+		//color: #ccc
+
+.red-button, input.red-button
+	+inline-block
+	padding: 0 8px
+	line-height: 32px
+	background-color: $red
+	white-space: nowrap
+	font-size: 13px
+	color: #fff
+	text-decoration: none
+	border: none
+	+border-radius(4px)
+	+transition(background-color 100ms linear)
+	&.is-joined-left
+		+border-radius(0 4px 4px 0)
+	&.is-joined-right
+		+border-radius(4px 0 0 4px)
+	&:hover
+		background-color: lighten($red, 5%)
+		color: #fff
+
+.orange-button, input.orange-button
+	@extend .red-button
+	background-color: $orange
+	&:hover
+		background-color: lighten($orange, 5%)
+
+
+// new button
+.burgundy-button, input.burgundy-button
+	@extend .red-button
+	background-color: $burgundy
+	&:hover
+		background-color: lighten($burgundy, 5%)
