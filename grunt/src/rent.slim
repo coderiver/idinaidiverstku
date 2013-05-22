@@ -1,0 +1,148 @@
+| <!doctype html>
+/![if lte IE 8] <html class="lteie8">
+/! [if gt IE 8]><!
+html
+	/! <![endif]
+	head
+		meta charset="utf-8"
+			title Template
+			meta content="width=device-width" name="viewport"
+			link href="css/screen.css" media="screen" rel="stylesheet"
+				script src="js/app.js"
+	body
+		.wrapper
+			.main
+				.advert-nav
+					a.advert-nav-to-list href="#"
+						span.arr
+						| Назад к списку
+					a.advert-nav-next href="#"
+						| Следующее объявление
+						span.arr
+					a.advert-nav-prev href="#"
+						span.arr
+						| Предыдущее объявление
+				ul.breadcrumbs
+					li
+						a href="#" Забайкальский край
+					li
+						a href="#" г. Краснокаменск
+					li
+						a href="#" пр. Строителей
+				.content
+					/! BEGIN .advert
+					.advert
+						h2.advert-title
+							| г. Петропавловск-Камчатский, ул. Академика Королёва, д. 23
+						/! BEGIN .advert-info
+						.advert-info
+							.advert-data
+								table.t1
+									tr
+										td.cell-mid Аренда
+										td.cell-mid Квартира
+									tr
+										td
+											strong 2
+											| комнат
+										td
+											strong 225
+											| площадь
+									tr
+										td colspan="2"
+											strong 100 000
+											| рублей/месяц
+									tr
+										td
+											| Опубликовано
+											br 12 дней назад
+										td Просмотры: 97
+							.advert-photo
+								img alt="" src="img/photo-01-gel.jpg"
+						/! END .advert-info
+						h2.advert-title Карта / Улица
+						.advert-map
+							img alt="" src="img/map.jpg"
+						/! END .advert-text
+						.advert-text
+							p В Доходном Доме Смирновых на Петровке на 5-м этаже 7-этажного исторического особняка предлагается светлая 4-комнатная квартира с ремонтом общей площадью 212 кв.м. Квартира ориентирована на 2 стороны и спланирована на кухню, гостиную, 3 спальни и кабинет. Имеются 3 с/у. Высота потолков - 4 метра, что позволило дополнительно использовать антрессоль площадью 60кв.м. и разместить гардеробные и кладовку. Квартира с согласованной планировкой.
+							p Кухня оборудована встроенной техникой. Кондиционеры. Кирпичный Особняк был построен в начале XIX века по индивидуальному проекту архитектора Г. А. Гельриха. В 1994 году была реконструкция с сохранением исторического фасада и с заменой перекрытий на ж/б. Отремонтированный парадный подъезд с лепниной. Консьерж.
+						/! BEGIN .advert-text
+						/! BEGIN .advert-features
+						table.advert-features
+							tr
+								th Адрес:
+								td г. Москва, ул. Петровка, д. 17С1
+							tr
+								th Комнат:
+								td 5
+							tr
+								th Общая площадь (Жилая/Кухни):
+								td 212 (121/23) кв. м.
+							tr
+								th Дополнительно:
+								td Лифт
+							tr
+								th Этаж/Всего этажей:
+								td 5/7
+							tr
+								th Ближайшие станции метро:
+								td Чеховская
+							tr
+								th Цена:
+								td 1 600 200 $
+						/! END .advert-features
+						/! BEGIN .advert-form
+						.advert-form.advert-form-big
+							form action="#"
+								h3.advert-form-title Запросить подробности по объекту
+								.advert-form-block
+									.advert-company
+										.advert-company-logo
+											img alt="" src="img/company-logo-01.jpg"
+										.advert-company-name IntermarkSavills
+									a.burgundy-button href="#" Связатся по телефону
+								.advert-form-block
+									.advert-form-box
+										.input
+											input placeholder="Имя" type="text"
+										.input
+											input placeholder="Телефон" type="text"
+										.input
+											input placeholder="Email" type="email"
+									.advert-form-box
+										.input
+											textarea cols="30" id="" name="" placeholder="Меня заинтересовал этот объект, свяжитесь со мной" rows="10"
+										input.orange-button type="submit" value="Отправить"
+						/! END .advert-form
+					/! END .advert
+				.sidebar
+					.btn-holder
+						a.btn-liked href="#" В избранное
+						a.btn-error href="#" Нашли ошибку?
+					/! BEGIN .advert-form
+					.advert-form
+						form action="#"
+							h3.advert-form-title Запросить подробности по объекту
+							.advert-form-block
+								.advert-company
+									.advert-company-logo
+										img alt="" src="img/company-logo-01.jpg"
+									.advert-company-name IntermarkSavills
+								a.burgundy-button href="#" Связатся по телефону
+							.advert-form-block
+								.advert-form-box
+									.input
+										input placeholder="Имя" type="text"
+									.input
+										input placeholder="Телефон" type="text"
+									.input
+										input placeholder="Email" type="email"
+								.advert-form-box
+									.input
+										textarea cols="30" id="" name="" placeholder="Меня заинтересовал этот объект, свяжитесь со мной" rows="10"
+									input.orange-button type="submit" value="Отправить"
+					/! END .advert-form
+					.banner
+						a href="#"
+							img alt="" src="img/banner.jpg"
