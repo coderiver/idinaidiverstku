@@ -1,3 +1,7 @@
+// npm install
+// npm install grunt --save-dev
+// gem install slim
+
 'use strict';
 var path = require( 'path' );
 var lrSnippet = require( 'grunt-contrib-livereload/lib/utils' ).livereloadSnippet;
@@ -75,15 +79,15 @@ grunt.initConfig({
 			},
 			files: {
 				'production/img/*.png': 'src/img/*.png'
-				//'production/img/*.jpg': 'src/img/*.jpg'
 			}
 		}
 	},
 	slim: {
 		dist: {
 			files: {
-				//'production/rent.html': 'src/rent.slim'
-			//	'production/sell.html': 'src/sell.slim'
+				'production/*.html': 'src/*.slim'
+				//'production/rent.html': 'src/rent.slim',
+				//'production/sell.html': 'src/sell.slim'
 			}
 		}
 	},
@@ -99,7 +103,7 @@ grunt.initConfig({
 	},
 	clean: {
 		dev: ["production/_*.html", "production/css/lib", "src/css", 'production/docs'],
-		release: ["production/*",]
+		release: [ 'production/*' ]
 	}
 });
 	//require('matchdep').filterDev('grunt-*').forEach(grunt.loadNpmTasks);
@@ -120,7 +124,7 @@ grunt.initConfig({
 
 
 	grunt.registerTask( 'default', ['livereload-start', 'connect', 'regarde' ]);
-	//grunt.registerTask( 'release', ['clean:release', 'compass', 'slim', 'copy', 'concat', 'csso', 'min', 'styleguide']);
+	grunt.registerTask( 'release', ['clean:release', 'compass', 'copy', 'slim', 'csso', 'clean:dev', 'livereload', 'styleguide']);
 
 
 };
