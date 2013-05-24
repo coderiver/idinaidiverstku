@@ -1,0 +1,290 @@
+| <!doctype html>
+/![if lte IE 8] <html class="lteie8">
+/! [if gt IE 8]><!
+html
+	/! <![endif]
+	head
+		meta charset="utf-8"
+			title Template
+			meta content="width=device-width" name="viewport"
+			link href="css/screen.css" media="screen" rel="stylesheet"
+	body
+		.wrapper
+			.main
+				.content
+					/! BEGIN .add-adv
+					.add-adv
+						h2.add-adv-main-title
+							| Создание объявления
+						.add-adv-tab
+							ul
+								li.active Продажа
+								li Аренда
+						/! BEGIN .add-adv-tab-box
+						.add-adv-tab-content
+							/! BEGIN .add-adv-tab-box
+							.add-adv-tab-box
+								form
+									/! BEGIN .form-block
+									.form-block
+										.add-adv-title Опубликовать как
+										fieldset
+											.input-radio
+												input type="radio"
+												label Агент
+											.input-radio
+												input type="radio"
+												label Собственник
+									/! END .form-block
+
+									/! BEGIN .form-block
+									.form-block
+										.add-adv-title Контакты для связи
+										fieldset
+											.row
+												.input
+													input type="text" placeholder="Ярослав"
+													span.input-required *
+												.input
+													input type="text" placeholder="Самойлов"
+													span.input-required *
+											.row
+												.input
+													input type="email" placeholder="yaosamo@gmail.com"
+													span.input-required *
+												.input-many
+													.input
+														input type="text" placeholder="89270261027"
+													.input
+														input type="text" placeholder="до 22:00"
+														span.input-required *
+									/! END .form-block
+
+									/! BEGIN .form-block
+									.form-block
+										.add-adv-title Компания
+										fieldset
+											.row
+												.input
+													input type="text" placeholder='ООО "Аверс"'
+													span.input-required *
+												.input
+													input type="text" placeholder="84953246571"
+													span.input-required *
+											.row
+												.input
+													input type="email" placeholder="info@avers.ru"
+													span.input-required *
+												.input.input-twice
+													input type="text" placeholder="г. Москва, ул. Новопромышленная, 34"
+													span.input-required *
+									/! END .form-block
+
+									/! BEGIN .form-block
+									.form-block
+										.add-adv-title Тип недвижимости
+										fieldset
+											.input-radio
+												input type="radio"
+												label Комната
+											.input-radio
+												input type="radio"
+												label Квартира
+											.input-radio
+												input type="radio"
+												label Дом
+											.input-radio
+												input type="radio"
+												label Коммерческая
+											.input-radio
+												input type="radio"
+												label Участок
+									/! END .form-block
+
+									/! BEGIN .form-block
+									.form-block
+										.add-adv-title Адресная информация
+										fieldset
+											.row
+												.input
+													input type="text" placeholder="Регион"
+													span.input-required *
+												.input
+													input type="text" placeholder="Город"
+													span.input-required *
+											.row
+												.input
+													input type="text" placeholder="Улица"
+													span.input-required *
+												.input
+													input.input-tiny type="text" placeholder="Дом"
+													span.input-required *
+												.input
+													input.input-small type="text" placeholder="Корпус"
+												.input
+													input.input-small type="text" placeholder="Строение"
+												.input
+													input.input-small type="text" placeholder="Владение"
+											.row
+												.input
+													input.input-mid type="text" placeholder="Жилой комплекс"
+												.input
+													input.input-mid type="text" placeholder="Шоссе (ближайшее)"
+												.input
+													input.input-mid type="text" placeholder="Расстояние до города"
+										.add-adv-map
+											img src="img/map2.jpg" alt=""
+									/! END .form-block
+
+									/! BEGIN .form-block
+									.form-block
+										.add-adv-title Параметры
+										fieldset
+											.row
+												.input-many
+													.input
+														input.input-mid type="text" placeholder="Стоимость"
+														span.input-required *
+													.select.select-tiny
+														select
+															option 1
+															option 2
+															option 3
+														.select-text РУБ
+														.select-arr
+													.select.select-small
+														select
+															option 1
+															option 2
+															option 3
+														.select-text Общая
+														.select-arr
+												.average-price
+													|В этом районе <br> cредняя цена:
+													span
+														|от 
+														strong 106 000
+														em P
+														|/ Мес.
+											.row
+												.input
+													input.input-small type="text" placeholder="Комнат"
+													span.input-required *
+												.select
+													select
+														option 1
+														option 2
+														option 3
+													.select-text Планировка
+													.select-arr
+													span.input-required *
+												.input
+													input.input-tiny type="text" placeholder="Этаж"
+												.input-deveder /
+												.input
+													input.input-tiny type="text" placeholder="Всего"
+											.row
+												.input
+													input.input-mid type="text" placeholder="Общая площадь"
+													span.input-required *
+													span.hint м
+														sup 2
+												.input
+													input.input-mid type="text" placeholder="Жилая площадь"
+													span.input-required *
+													span.hint м
+														sup 2
+												.input
+													input.input-mid type="text" placeholder="Площадь кухни"
+													span.input-required *
+													span.hint м
+														sup 2
+											.row
+												.select.select-mid
+													select
+														option 1
+														option 2
+														option 3
+													.select-text Тип продажи
+													.select-arr
+													span.input-required *
+												.select.select-mid
+													select
+														option 1
+														option 2
+														option 3
+													.select-text Материал дома
+													.select-arr
+											.row
+												.select.select-mid
+													select
+														option 1
+														option 2
+														option 3
+													.select-text Ремонт
+													.select-arr
+												.select.select-mid
+													select
+														option 1
+														option 2
+														option 3
+													.select-text Санузел
+													.select-arr
+													span.input-required *
+												.select.select-mid
+													select
+														option 1
+														option 2
+														option 3
+													.select-text Покрытие пола
+													.select-arr
+									/! END .form-block
+
+									/! BEGIN .form-block
+									.form-block
+										.add-adv-title Дополнительно
+										fieldset
+											.row
+												.input-check
+													input type="checkbox"
+													label Интернет
+												.input-check
+													input type="checkbox"
+													label Мебель
+												.input-check
+													input type="checkbox"
+													label Ипотека
+												.input-check
+													input type="checkbox"
+													label Лифт
+											.row
+												.input-check
+													input type="checkbox"
+													label Парковка
+												.input-check
+													input type="checkbox"
+													label Сигнализация
+												.input-check
+													input type="checkbox"
+													label Кондиционер
+												.input-check
+													input type="checkbox"
+													label Балкон
+									/! END .form-block
+
+
+
+
+							/! END .add-adv-tab-box
+
+							/! BEGIN .add-adv-tab-box
+							.add-adv-tab-box
+
+							/! END .add-adv-tab-box
+						/! END .add-adv-tab-box
+					/! END .add-adv
+
+				.sidebar
+					.banner
+						a href="#"
+							img alt="" src="img/banner.jpg"
