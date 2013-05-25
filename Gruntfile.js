@@ -40,7 +40,7 @@ grunt.initConfig({
 	},
 	regarde: {
 		compile: {
-			files: ['src/sass/*.scss', 'src/*.slim'],
+			files: ['src/sass/*.sass', 'src/*.slim'],
 			tasks: ['compass', 'slim', 'csso', 'clean:dev']
 		}
 	},

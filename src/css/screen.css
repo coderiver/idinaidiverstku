@@ -22,11 +22,11 @@ body { font-family: Arial, sans-serif; font-weight: normal; font-size: 12px; lin
 .advert-nav a { color: #636363; text-decoration: none; line-height: 36px; white-space: nowrap; padding: 4px 20px 0; }
 .advert-nav a:hover { text-decoration: underline; }
 .advert-nav .arr { display: inline-block; vertical-align: middle; height: 10px; width: 7px; position: relative; top: -2px; }
-.advert-nav .advert-nav-to-list .arr, .advert-nav .advert-nav-prev .arr { background: url('../img/icons-seeb869fddb.png') 0 0 no-repeat; margin-right: 10px; }
+.advert-nav .advert-nav-to-list .arr, .advert-nav .advert-nav-prev .arr { background: url('icons-s68d76f889c.png') 0 0 no-repeat; margin-right: 10px; }
 .advert-nav .advert-nav-to-list { float: left; }
 .advert-nav .advert-nav-prev { float: right; }
 .advert-nav .advert-nav-next { float: right; }
-.advert-nav .advert-nav-next .arr { background: url('../img/icons-seeb869fddb.png') 0 -20px no-repeat; margin-left: 10px; }
+.advert-nav .advert-nav-next .arr { background: url('icons-s68d76f889c.png') 0 -20px no-repeat; margin-left: 10px; }
 
 .breadcrumbs { font-family: "Proxima Nova", Arial, sans-serif; font-size: 11px; letter-spacing: 0.06em; overflow: hidden; list-style: none; margin-bottom: 5px; }
 .breadcrumbs li { float: left; }
@@ -52,7 +52,7 @@ body { font-family: Arial, sans-serif; font-weight: normal; font-size: 12px; lin
 .advert-data .cell-small { height: 50px; }
 
 .hypothec { background: white; box-shadow: 0 0 0 2px white, 0 0 10px 2px rgba(0, 0, 0, 0.5); position: relative; }
-.hypothec:before { content: ""; position: absolute; top: -8px; margin-left: -7px; left: 50%; height: 6px; width: 14px; background: url('../img/icons-seeb869fddb.png') 0 -40px no-repeat; }
+.hypothec:before { content: ""; position: absolute; top: -8px; margin-left: -7px; left: 50%; height: 6px; width: 14px; background: url('icons-s68d76f889c.png') 0 -57px no-repeat; }
 .hypothec .hypothec-inner { display: table-cell; height: 102px; width: 100%; vertical-align: middle; }
 .hypothec .hypothec-link { color: #eb501b; }
 
@@ -134,3 +134,18 @@ textarea { border: 1px solid #cecece; background-color: white; font-size: 13px; 
 
 .burgundy-button, input.burgundy-button { background-color: #731516; }
 .burgundy-button:hover, input.burgundy-button:hover { background-color: #89191a; }
+
+.add-adv .form-block fieldset { background: #f2efe9; border: none; padding: 11px 12px 1px 13px; }
+.add-adv .row { margin-bottom: 10px; }
+.add-adv .row:after { content: ""; clear: both; display: block; width: 100%; height: 0; }
+.add-adv .row .input { float: left; }
+.add-adv .row .input:last-child { margin-right: 0; }
+.add-adv .input { position: relative; margin-right: 20px; }
+.add-adv input[type=text], .add-adv input[type=email], .add-adv input[type=phone] { width: 289px; height: 39px; }
+.add-adv .input-required { background: url('icons-s68d76f889c.png') 0 -40px no-repeat; height: 7px; width: 7px; position: absolute; top: 6px; right: 8px; color: transparent; }
+.add-adv input.input-tiny { width: 53px; }
+.add-adv input.input-small { width: 73px; }
+.add-adv input.input-mid { width: 179px; }
+.add-adv input.input-mid2 { width: 160px; }
+.add-adv input.input-mid3 { width: 115px; }
+.add-adv .input-many .input { margin-right: 0; }

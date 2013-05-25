@@ -498,27 +498,61 @@ textarea
 	
 	.form-block
 		fieldset
+			background: #f2efe9
+			border: none
+			padding: 11px 12px 1px 13px
+			
 	.row
+		margin-bottom: 10px
+		&:after
+			content: ""
+			clear: both
+			display: block
+			width: 100%
+			height: 0
+		.input
+			float: left
+			&:last-child
+				margin-right: 0
+		
 	.input-radio
 		input
 		label
 	
 	.input
+		position: relative
+		margin-right: 20px
 
 	.input-many
 
 	input[type=text], input[type=email], input[type=phone]
-		width: 299px;
+		width: 289px
+		height: 39px
 	
 	.input-required
+		background: sprite($icons, 'star') no-repeat
+		height: 7px
+		width: 7px
+		position: absolute
+		top: 6px
+		right: 8px
+		color: transparent 
 
-	.input-tiny
+	input.input-tiny
 		width: 53px
-	.input-small
-		width: 83px
-	.input-mid
-		width: 187px
-
+	input.input-small
+		width: 73px
+	input.input-mid
+		width: 179px
+	input.input-mid2
+		width: 160px
+	input.input-mid3
+		width: 115px
+	.input-many
+		.input
+			margin-right: 0
+			input
+				border-left:0;
 	.select
 		select
 
