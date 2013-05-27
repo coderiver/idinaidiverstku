@@ -490,16 +490,43 @@ textarea
 		font-size: 26px
 		color: #2b2b2b
 		font-weight: normal
+		margin-bottom: 23px
 	.add-adv-title
 		font-size: 22px
 		color: #2b2b2b
 		font-family: $bold-font
 		margin: 32px 0 22px
 	.add-adv-tab
+		border-bottom: 2px solid #eaeaea
+		width: 100%
+		display: inline-block
+		font-size: 0
+		line-height: 0
 		ul
+			float: left
+			background: #d1d1d1
+			font-size: 16px
+			color: #adadad
+			font-family: $bold-font
+			list-style-position: 0.01em
+			border-radius: 8px 8px 0 0
 			li
+				float: left
+				line-height: 40px
+				height: 38px
+				padding: 0 32px
+				border-radius: 8px 8px 0 0
+				list-style: none
+				cursor: pointer
+				&:hover
+					background-color: lighten(#d1d1d1, 3%)
+					color: lighten(#adadad, 3%)
 			.active
-
+				background: #eaeaea
+				color: #40444a
+				&:hover
+					background-color: lighten(#eaeaea, 3%)
+					color: lighten(#40444a, 3%)
 	.add-adv-tab-content
 
 	.add-adv-tab-box
@@ -528,14 +555,12 @@ textarea
 			float: left
 		*:last-child
 			margin-right: 0
-		
 	.input-radio
 		input
 		label
 	.input
 		position: relative
 		margin-right: 20px
-	
 	.hint
 		position: absolute
 		color: #1a1a1a
@@ -688,8 +713,8 @@ textarea
 		margin-right: 20px
 		+transition(background-color 100ms linear)
 		&:hover
-			background-color: lighten($red, 5%)
-			color: #fff
+			background-color: lighten(#c1213a, 5%)
+			cursor: pointer
 	.button-gray
 		+inline-block
 		padding: 0 40px
@@ -704,5 +729,5 @@ textarea
 		margin-right: 20px
 		+transition(background-color 100ms linear)
 		&:hover
-			background-color: lighten($red, 5%)
-			color: #fff
+			background-color: lighten(#e0e0e0, 5%)
+			cursor: pointer

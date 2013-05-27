@@ -18,8 +18,6 @@ relative_assets = true
 # To disable debugging comments that display the original location of your selectors. Uncomment:
 line_comments = false
 
-#preferred_syntax = :scss
-
 # this one for switching between production and dev versions of the website
 module Sass::Script::Functions
   def image_path(string)

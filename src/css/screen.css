@@ -138,8 +138,14 @@ textarea { border: 1px solid #cecece; background-color: white; font-size: 13px; 
 .burgundy-button:hover, input.burgundy-button:hover { background-color: #89191a; }
 
 .add-adv { margin-bottom: 40px; }
-.add-adv .add-adv-main-title { font-size: 26px; color: #2b2b2b; font-weight: normal; }
+.add-adv .add-adv-main-title { font-size: 26px; color: #2b2b2b; font-weight: normal; margin-bottom: 23px; }
 .add-adv .add-adv-title { font-size: 22px; color: #2b2b2b; font-family: "Proxima Nova Bold", Arial, sans-serif; margin: 32px 0 22px; }
+.add-adv .add-adv-tab { border-bottom: 2px solid #eaeaea; width: 100%; display: inline-block; font-size: 0; line-height: 0; }
+.add-adv .add-adv-tab ul { float: left; background: #d1d1d1; font-size: 16px; color: #adadad; font-family: "Proxima Nova Bold", Arial, sans-serif; list-style-position: 0.01em; border-radius: 8px 8px 0 0; }
+.add-adv .add-adv-tab ul li { float: left; line-height: 40px; height: 38px; padding: 0 32px; border-radius: 8px 8px 0 0; list-style: none; cursor: pointer; }
+.add-adv .add-adv-tab ul li:hover { background-color: #d9d9d9; color: #b5b5b5; }
+.add-adv .add-adv-tab ul .active { background: #eaeaea; color: #40444a; }
+.add-adv .add-adv-tab ul .active:hover { background-color: #f2f2f2; color: #474c52; }
 .add-adv .form-block fieldset { background: #f2efe9; border: none; padding: 11px 12px 1px 13px; margin-bottom: 12px; }
 .add-adv .form-block fieldset.indent .row { margin-bottom: 20px; }
 .add-adv .form-block fieldset.indent .row:last-child { margin-bottom: 10px; }
@@ -190,6 +196,6 @@ textarea { border: 1px solid #cecece; background-color: white; font-size: 13px; 
 .add-adv .check-col4 { width: 125px; }
 .add-adv .button-box { margin-top: 70px; }
 .add-adv .button-red { display: inline-block; padding: 0 50px; height: 47px; background: #c1213a; font-size: 17px; color: #f8f8f8; line-height: 47px; text-decoration: none; border: none; border-radius: 4px; margin-right: 20px; -moz-transition: background-color 100ms linear 1s ease-in-out; -o-transition: background-color 100ms linear 1s ease-in-out; -webkit-transition: background-color 100ms linear 1s ease-in-out; -ms-transition: background-color 100ms linear 1s ease-in-out; transition: background-color 100ms linear 1s ease-in-out; }
-.add-adv .button-red:hover { background-color: #f7001a; color: white; }
+.add-adv .button-red:hover { background-color: #d72541; cursor: pointer; }
 .add-adv .button-gray { display: inline-block; padding: 0 40px; height: 47px; background: #e0e0e0; font-size: 17px; color: #363636; line-height: 47px; text-decoration: none; border: none; border-radius: 4px; margin-right: 20px; -moz-transition: background-color 100ms linear 1s ease-in-out; -o-transition: background-color 100ms linear 1s ease-in-out; -webkit-transition: background-color 100ms linear 1s ease-in-out; -ms-transition: background-color 100ms linear 1s ease-in-out; transition: background-color 100ms linear 1s ease-in-out; }
-.add-adv .button-gray:hover { background-color: #f7001a; color: white; }
+.add-adv .button-gray:hover { background-color: #ededed; cursor: pointer; }
