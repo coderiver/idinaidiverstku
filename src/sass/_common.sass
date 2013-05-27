@@ -1,5 +1,6 @@
 
 $icons: sprite-map("icons/*.png", $spacing: 10px)
+
 @mixin inline-block
 	display: inline-block
 
@@ -76,7 +77,8 @@ a img,fieldset
 .content
 	float: left
 	width: 655px
-
+.content-add
+	width: 670px
 .sidebar
 	float: right
 	width: 300px
@@ -483,10 +485,16 @@ textarea
 		background-color: lighten($burgundy, 5%)
 
 .add-adv
+	margin-bottom: 40px
 	.add-adv-main-title
-	
+		font-size: 26px
+		color: #2b2b2b
+		font-weight: normal
 	.add-adv-title
-
+		font-size: 22px
+		color: #2b2b2b
+		font-family: $bold-font
+		margin: 32px 0 22px
 	.add-adv-tab
 		ul
 			li
@@ -495,13 +503,19 @@ textarea
 	.add-adv-tab-content
 
 	.add-adv-tab-box
-	
 	.form-block
 		fieldset
 			background: #f2efe9
 			border: none
 			padding: 11px 12px 1px 13px
-			
+			margin-bottom: 12px
+			&.indent .row
+				margin-bottom: 20px
+				&:last-child
+					margin-bottom: 10px
+			&.bordered
+				border: 2px solid #c1213a
+				padding: 18px 10px 8px 11px
 	.row
 		margin-bottom: 10px
 		&:after
@@ -512,47 +526,183 @@ textarea
 			height: 0
 		.input
 			float: left
-			&:last-child
-				margin-right: 0
+		*:last-child
+			margin-right: 0
 		
 	.input-radio
 		input
 		label
-	
 	.input
 		position: relative
 		margin-right: 20px
-
-	.input-many
-
-	input[type=text], input[type=email], input[type=phone]
-		width: 289px
-		height: 39px
 	
-	.input-required
+	.hint
+		position: absolute
+		color: #1a1a1a
+		top: 9px
+		right: 13px
+		font-size: 14px
+	.input-deveder
+		margin: 12px 15px 0 -5px
+		float: left
+		color: #aaa
+		font-size: 14px
+	input[type=text], input[type=email], input[type=phone]
+		width: 296px
+		height: 39px
+	.with-hint
+		.input-mid
+			padding-right: 40px
+			width: 185px - 40px
+		.required
+			right: 29px
+	.required
 		background: sprite($icons, 'star') no-repeat
 		height: 7px
 		width: 7px
 		position: absolute
-		top: 6px
-		right: 8px
-		color: transparent 
-
+		top: 7px
+		right: 6px
+		color: transparent
 	input.input-tiny
 		width: 53px
 	input.input-small
-		width: 73px
+		width: 82px
 	input.input-mid
-		width: 179px
+		width: 185px
 	input.input-mid2
 		width: 160px
 	input.input-mid3
-		width: 115px
+		width: 122px
 	.input-many
-		.input
+		.input, .select
 			margin-right: 0
 			input
-				border-left:0;
+				border-left: 0
+				border-radius: 0
+			&:first-child
+				input
+					border-radius: 4px 0 0 4px
+					border-left: 1px solid #cecece
+			&:last-child
+				input
+					border-radius: 0 4px 4px 0
+		.select
+			border-left: 0
+			border-radius: 0
+			&:first-child
+				border-radius: 4px 0 0 4px
+				border-left: 1px solid #cecece
+			&:last-child
+				border-radius: 0 4px 4px 0
 	.select
+		position: relative
+		background-color: #fff
+		border: 1px solid #cecece
+		border-radius: 4px
+		font-size: 14px
+		height: 39px
+		float: left
+		width: 289px + 14px
+		margin: 0 20px 0 0
+		vertical-align: top
+		&.select-tiny
+			width: 53px + 14px
+		&.select-small
+			width: 82px + 14px
+		&.select-mid
+			width: 185px + 14px
+		.required
+			right: 29px
 		select
+			width: 100%
+			height: 39px
+			position: absolute
+			top: 0
+			left: 0
+			opacity: 0
+		.select-text
+			height: 100%
+			line-height: 39px
+			color: #aaa
+			//color: #333
+			padding-left: 14px
+		.select-arr
+			background: sprite($icons, 'select-arr') no-repeat
+			width: 10px
+			height: 7px
+			position: absolute
+			top: 17px
+			right: 10px
 
+	.input-radio
+		float: left
+		margin: -1px 28px 7px -3px
+	.input-check
+		float: left
+		width: 160px
+		margin: 0 0 -3px -3px
+	input[type="checkbox"],input[type="radio"]
+		display: none
+	input[type="checkbox"] + label, input[type="radio"] + label
+		color: #2b2b2b
+		font-size: 14px
+		cursor: pointer
+	input[type="checkbox"] + label::before, input[type="radio"] + label::before
+		content: ""
+		display: inline-block
+		height: 16px
+		width: 16px
+		margin: 0 10px 0 0
+		vertical-align: text-bottom
+	input[type="checkbox"] + label::before
+		background: sprite($icons, 'check') no-repeat
+	input[type="radio"] + label::before
+		background: sprite($icons, 'radio') no-repeat
+	input[type="checkbox"]:checked + label::before
+		background: sprite($icons, 'check_select') no-repeat
+	input[type="radio"]:checked + label::before
+		background: sprite($icons, 'radio_select') no-repeat
+	.check-col1
+		width: 171px
+	.check-col2
+		width: 190px
+	.check-col3
+		width: 167px
+	.check-col4
+		width: 125px
+	.button-box
+		margin-top: 70px
+
+	.button-red
+		+inline-block
+		padding: 0 50px
+		height: 47px
+		background: #c1213a
+		font-size: 17px
+		color: #f8f8f8
+		line-height: 47px
+		text-decoration: none
+		border: none
+		+border-radius(4px)
+		margin-right: 20px
+		+transition(background-color 100ms linear)
+		&:hover
+			background-color: lighten($red, 5%)
+			color: #fff
+	.button-gray
+		+inline-block
+		padding: 0 40px
+		height: 47px
+		background: #e0e0e0
+		font-size: 17px
+		color: #363636
+		line-height: 47px
+		text-decoration: none
+		border: none
+		+border-radius(4px)
+		margin-right: 20px
+		+transition(background-color 100ms linear)
+		&:hover
+			background-color: lighten($red, 5%)
+			color: #fff

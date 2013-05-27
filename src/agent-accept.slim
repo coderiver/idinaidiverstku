@@ -11,7 +11,7 @@ html
 	body
 		.wrapper
 			.main
-				.content
+				.content.content-add
 					/! BEGIN .add-adv
 					.add-adv
 						h2.add-adv-main-title
@@ -30,11 +30,11 @@ html
 										.add-adv-title Опубликовать как
 										fieldset
 											.input-radio
-												input type="radio"
-												label Агент
+												input type="radio" id="radio-1" name="type1"
+												label for="radio-1" Собственник
 											.input-radio
-												input type="radio"
-												label Собственник
+												input type="radio" id="radio-2" name="type1"
+												label for="radio-2" Агент
 									/! END .form-block
 
 									/! BEGIN .form-block
@@ -44,20 +44,20 @@ html
 											.row
 												.input
 													input type="text" placeholder="Ярослав"
-													span.input-required *
+													span.required *
 												.input
 													input type="text" placeholder="Самойлов"
-													span.input-required *
+													span.required *
 											.row
 												.input
 													input type="email" placeholder="yaosamo@gmail.com"
-													span.input-required *
+													span.required *
 												.input-many
 													.input
 														input.input-mid2 type="text" placeholder="89270261027"
 													.input
 														input.input-mid3 type="text" placeholder="до 22:00"
-														span.input-required *
+														span.required *
 									/! END .form-block
 
 									/! BEGIN .form-block
@@ -67,17 +67,17 @@ html
 											.row
 												.input
 													input type="text" placeholder='ООО "Аверс"'
-													span.input-required *
+													span.required *
 												.input
 													input type="text" placeholder="84953246571"
-													span.input-required *
+													span.required *
 											.row
 												.input
 													input type="email" placeholder="info@avers.ru"
-													span.input-required *
+													span.required *
 												.input.input-twice
 													input type="text" placeholder="г. Москва, ул. Новопромышленная, 34"
-													span.input-required *
+													span.required *
 									/! END .form-block
 
 									/! BEGIN .form-block
@@ -85,40 +85,45 @@ html
 										.add-adv-title Тип недвижимости
 										fieldset
 											.input-radio
-												input type="radio"
-												label Комната
+												input type="radio" id="radio-3" name="type2"
+												label for="radio-3" Комната
 											.input-radio
-												input type="radio"
-												label Квартира
+												input type="radio" id="radio-4" name="type2"
+												label for="radio-4" Квартира
 											.input-radio
-												input type="radio"
-												label Дом
+												input type="radio" id="radio-5" name="type2"
+												label for="radio-5" Дом
 											.input-radio
-												input type="radio"
-												label Коммерческая
+												input type="radio" id="radio-6" name="type2"
+												label for="radio-6" Коммерческая
 											.input-radio
-												input type="radio"
-												label Участок
+												input type="radio" id="radio-7" name="type2"
+												label for="radio-7" Участок
 									/! END .form-block
 
 									/! BEGIN .form-block
 									.form-block
 										.add-adv-title Адресная информация
-										fieldset
+										fieldset.indent
 											.row
 												.input
 													input type="text" placeholder="Регион"
-													span.input-required *
+													span.required *
 												.input
 													input type="text" placeholder="Город"
-													span.input-required *
+													span.required *
 											.row
-												.input
-													input type="text" placeholder="Улица"
-													span.input-required *
+												.select.select-mid
+														.select-text Улица
+														.select-arr
+														span.required *
+														select
+															option 1
+															option 2
+															option 3
 												.input
 													input.input-tiny type="text" placeholder="Дом"
-													span.input-required *
+													span.required *
 												.input
 													input.input-small type="text" placeholder="Корпус"
 												.input
@@ -139,26 +144,26 @@ html
 									/! BEGIN .form-block
 									.form-block
 										.add-adv-title Параметры
-										fieldset
+										fieldset.bordered.indent
 											.row
 												.input-many
 													.input
 														input.input-mid type="text" placeholder="Стоимость"
-														span.input-required *
-													.select.select-tiny
-														select
-															option 1
-															option 2
-															option 3
+														span.required *
+													.select.select-small
 														.select-text РУБ
 														.select-arr
-													.select.select-small
 														select
 															option 1
 															option 2
 															option 3
+													.select.select-small
 														.select-text Общая
 														.select-arr
+														select
+															option 1
+															option 2
+															option 3
 												.average-price
 													|В этом районе <br> cредняя цена:
 													span
@@ -169,75 +174,82 @@ html
 											.row
 												.input
 													input.input-small type="text" placeholder="Комнат"
-													span.input-required *
-												.select
+													span.required *
+												.select.select-mid
+													.select-text Планировка
+													.select-arr
+													span.required *
 													select
 														option 1
 														option 2
 														option 3
-													.select-text Планировка
-													.select-arr
-													span.input-required *
 												.input
 													input.input-tiny type="text" placeholder="Этаж"
-												.input-deveder /
+												.input-deveder
+													| /
 												.input
 													input.input-tiny type="text" placeholder="Всего"
 											.row
-												.input
+												.input.with-hint
 													input.input-mid type="text" placeholder="Общая площадь"
-													span.input-required *
-													span.hint м
-														sup 2
-												.input
+													span.required *
+													span.hint
+														|м
+														sup
+															|2
+												.input.with-hint
 													input.input-mid type="text" placeholder="Жилая площадь"
-													span.input-required *
-													span.hint м
-														sup 2
-												.input
+													span.required *
+													span.hint
+														|м
+														sup
+															|2
+												.input.with-hint
 													input.input-mid type="text" placeholder="Площадь кухни"
-													span.input-required *
-													span.hint м
-														sup 2
+													span.required *
+													span.hint
+														|м
+														sup
+															|2
 											.row
 												.select.select-mid
-													select
-														option 1
-														option 2
-														option 3
 													.select-text Тип продажи
 													.select-arr
-													span.input-required *
-												.select.select-mid
+													span.required *
 													select
 														option 1
 														option 2
 														option 3
+												.select.select-mid
 													.select-text Материал дома
 													.select-arr
+													select
+														option 1
+														option 2
+														option 3
 											.row
 												.select.select-mid
-													select
-														option 1
-														option 2
-														option 3
 													.select-text Ремонт
 													.select-arr
-												.select.select-mid
 													select
 														option 1
 														option 2
 														option 3
+												.select.select-mid
 													.select-text Санузел
 													.select-arr
-													span.input-required *
-												.select.select-mid
+													span.required *
 													select
 														option 1
 														option 2
 														option 3
+												.select.select-mid
 													.select-text Покрытие пола
 													.select-arr
+													select
+														option 1
+														option 2
+														option 3
 									/! END .form-block
 
 									/! BEGIN .form-block
@@ -245,32 +257,43 @@ html
 										.add-adv-title Дополнительно
 										fieldset
 											.row
-												.input-check
-													input type="checkbox"
-													label Интернет
-												.input-check
-													input type="checkbox"
-													label Мебель
-												.input-check
-													input type="checkbox"
-													label Ипотека
-												.input-check
-													input type="checkbox"
-													label Лифт
+												.input-check.check-col1
+													input type="checkbox" id="check-1"
+													label for="check-1" Интернет
+												.input-check.check-col2
+													input type="checkbox" id="check-2"
+													label for="check-2" Мебель
+												.input-check.check-col3
+													input type="checkbox" id="check-3"
+													label for="check-3" Ипотека
+												.input-check.check-col4
+													input type="checkbox" id="check-4"
+													label for="check-4" Лифт
 											.row
-												.input-check
-													input type="checkbox"
-													label Парковка
-												.input-check
-													input type="checkbox"
-													label Сигнализация
-												.input-check
-													input type="checkbox"
-													label Кондиционер
-												.input-check
-													input type="checkbox"
-													label Балкон
+												.input-check.check-col1
+													input type="checkbox" id="check-5"
+													label for="check-5" Парковка
+												.input-check.check-col2
+													input type="checkbox" id="check-6"
+													label for="check-6" Сигнализация
+												.input-check.check-col3
+													input type="checkbox" id="check-7"
+													label for="check-7" Кондиционер
+												.input-check.check-col4
+													input type="checkbox" id="check-8"
+													label for="check-8" Балкон
 									/! END .form-block
+
+									/! BEGIN .form-block
+									.form-block
+										.add-adv-title Фотографии
+										img src="img/flat.jpg" alt=""
+									/! END .form-block
+
+									/! BEGIN .button-box
+									.button-box
+										button.button-red Добавить объявление
+										button.button-gray В черновики
 
 
 

@@ -35,7 +35,7 @@ grunt.initConfig({
 	csso: {
 		dist: {
 			src: 'src/css/screen.css',
-			dest:'production/css/screen.min.css'
+			dest:'src/css/screen.min.css'
 		}
 	},
 	regarde: {
